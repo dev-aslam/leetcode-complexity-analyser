@@ -2,6 +2,8 @@
 
 Complexity Analyser is a Tampermonkey script designed to analyze the time and space complexity of code on LeetCode using the Gemini API. This script adds an "Analyze Complexity with Gemini" button to the LeetCode UI, which, when clicked, sends the code to the Gemini API for analysis and displays the results.
 
+**Note: The API-generated results may be inaccurate; use them with caution.**
+
 ## Features
 
 - Adds an "Analyze Complexity with Gemini" button to LeetCode problem pages.
@@ -66,4 +68,5 @@ To mitigate risks associated with storing API keys:
 This script is provided as-is without warranty of any kind. Use it at your own risk. Keep in mind:
 
 - The API-generated results may be inaccurate; use with caution.
+- The script is still in development and may contain unintended bugs or issues.
 - The API key is stored in Tampermonkey's data storage, which could potentially be accessed by attackers.
