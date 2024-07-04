@@ -5,7 +5,7 @@
 // @description  Using Gemini API to analyse your code
 // @author       Aslam
 // @match        https://leetcode.com/problems/*
-// @icon         file://C:\Users\muham\OneDrive\Desktop\Scripts\ComplexityAnalyser\icon.svg
+// @icon         https://raw.githubusercontent.com/dev-aslam/leetcode-complexity-analyser/main/icon.svg
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
 // @require      http://crypto.stanford.edu/sjcl/sjcl.js
 // @grant        GM_getValue
