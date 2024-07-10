@@ -38,11 +38,19 @@
   div.appendChild(span);
 
   let code = "";
+  let language = "";
 
   function analyzeOnClick() {
-    let codeElement = document.querySelectorAll("pre code");
-    code = codeElement[0].innerText;
-    console.log(code);
+    const parentElement = document.querySelector(
+      ".mx-auto.flex.w-full.max-w-\\[700px\\].flex-col.gap-4.px-4.py-3"
+    );
+    const codeElement = parentElement.querySelector("pre code");
+    const languageElement = document.querySelector(
+      ".flex.items-center.gap-2.pb-2.text-sm.font-medium.text-text-tertiary.dark\\:text-text-tertiary"
+    );
+
+    language = languageElement.innerText.replace("Code\n", "");
+    code = codeElement.innerText;
     fetchData();
   }
 
@@ -138,13 +146,20 @@
           role: "user",
           parts: [
             {
-              text: `Identify the time complexity and space complexity of the given code. The result should be in this format:
-  
-                Time Complexity: Time Complexity without description
-                Space Complexity: Space Complexity without description
-  
-                Description: 
-                description breifly explain about the calculated time complexity and the discription should be strictly under 100 words.   ${code}`,
+              text: `Identify the time complexity and space complexity of the given ${language} code. The result should be in this format:
+
+              Time Complexity: Time Complexity without description and use superscript
+              Space Complexity: Space Complexity without description and use superscript
+
+              Description: 
+              description breifly explain about the calculated time complexity and the discription should be strictly under 100 words.   ${code}
+              
+              example:
+              Time Complexity: O(n²)
+              Space Complexity: O(1)
+
+              Description:
+              The time complexity is O(n²) because the function uses two nested loops, each iterating over the array, leading to n * n iterations in the worst case. The space complexity is O(1) because the function uses a constant amount of extra space regardless of the input array size.`,
             },
           ],
         },
