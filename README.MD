@@ -4,6 +4,9 @@ Complexity Analyser is a Tampermonkey script designed to analyze the time and sp
 
 **Note: The API-generated results may be inaccurate; use them with caution.**
 
+![alt Complexity Analyser](https://i.imgur.com/j0TfIwZ.png)
+![alt Complexity Analyser Result](https://i.imgur.com/WMC8oDe.png)
+
 ## Features
 
 - Adds an "Analyze Complexity with Gemini" button to LeetCode problem pages.
